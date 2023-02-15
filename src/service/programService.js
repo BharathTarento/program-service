@@ -117,7 +117,7 @@ async function createProgram(req, response) {
     }));
   }).catch(err => {
     // console.log(err)
-    // console.log("Error adding Program to db", err);
+    console.log("Error adding Program to db", err);
     loggerError('Error Adding program to DB',rspObj,errCode+errorCodes.CODE2);
     loggerService.exitLog({responseCode: 'ERR_CREATE_PROGRAM'}, logObject);
     return response.status(400).send(errorResponse({
